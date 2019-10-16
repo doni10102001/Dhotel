@@ -1,0 +1,14 @@
+nav {
+	background-color: rgba(0,0,0,0.3);
+}
+.img {
+	width: auto;
+	height: 700px;
+}
+#form {
+	margin-bottom: 80px
+}
+.img-content {
+	height: 200px;
+	width: auto;
+}

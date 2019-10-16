@@ -1,0 +1,60 @@
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+      {{> sidebar}}
+    </nav>
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2"><i class="fa fa-table  fa-fw"></i>Man. Kamar Hotel</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+          <div class="btn-group mr-2">
+            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+          </div>
+          <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+            <span data-feather="calendar"></span>
+            This week
+          </button>
+        </div>
+      </div>
+      <div class="card">
+          <div class="card-header">
+              <h6>*Tambah Data Kamar Hotel</h6>
+          </div>
+          <div class="card-body">
+              <form action="/admin/insert" method="post">
+                  <input type="hidden" name="_id" value="{{value._id}}">
+                  <div class="form-group">
+                      <label for="nomor">Nomor Kamar*</label>
+                      <input type="text" name="nomor" class="form-control" value="{{ value.nomor }}" aria-describedby="emailHelp" id="nomor" required>
+                      <small id="emailHelp" class="form-text text-muted">Isi Nomor Kamar Hotel secara benar.</small>
+                  </div>
+                  <div class="form-group">
+                      <label for="lantai">Lantai Kamar*</label>
+                      <input type="text" name="lantai" class="form-control" value="{{value.lantai}}" aria-describedby="emailHelp" id="lantai" required>
+                      <small id="emailHelp" class="form-text text-muted">Isi Lantai Kamar Hotel secara benar.</small>
+                  </div>
+                  <div class="form-group">
+                      <label for="fasilitas">fasilitas Kamar*</label>
+                      <input type="text" name="fasilitas" class="form-control" value="{{value.fasilitas}}" aria-describedby="emailHelp" id="fasilitas" required>
+                      <small id="emailHelp" class="form-text text-muted">Isi fasilitas Kamar Hotel secara benar.</small>
+                  </div>
+                  <div class="form-group">
+                      <label for="nomor">Harga Permalam Kamar*</label>
+                      <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">Rp.</div>
+                        </div>
+                        <input type="text" name="harga_permalam" class="form-control" id="inlineFormInputGroup" value="{{value.harga_permalam}}" aria-describedby="emailHelp" name="harga_permalam">
+                    </div>
+                      <small id="emailHelp" class="form-text text-muted">Isi Harga Hotel secara benar.</small>
+                  </div>
+                  <button type="submit" class="btn btn-success float-right mr-3">Simpan</button>
+                  <a href="/admin/ManKamarHotel" class="btn btn-warning float-right mr-3">Kembali</a>
+              </form>
+          </div>
+      </div>
+    </main>
+  </div>
+</div>
