@@ -4,7 +4,7 @@
 {{> content}}
 {{!-- end Content --}}
 {{!-- Produk --}}
-<div class="container-fluid">
+<div class="container-fluid" id="kamar">
 	<div class="card">
 		<div class="card-header">
 			<h3 class="text-center">
@@ -13,102 +13,37 @@
 		</div>
 		<div class="card-body">
 			<div class="row">
+				{{# each item }}
 				<div class="col-md-3">
-					<a href="" class="card-link">
+					<a href="/kamars/{{this._id}}" class="card-link m-1">
 						<div class="card" style="width: 18rem;">
 							<img src="https://i0.wp.com/penginapan.net/wp-content/uploads/Kamar-Hotel-Executive.jpg?resize=460%2C300&ssl=1" class="card-img-top img-content" alt="...">
 							<div class="card-body">
-								<h5 class="card-title text-dark">KAMAR 001</h5>
-								<p class="card-text text-dark"><strong>Rp. 400.000,00 /malam</strong></p>
+								<h5 class="card-title text-dark">Kamar {{this.nomor}}</h5>
+								<p class="card-text text-dark"><strong>Rp. {{this.harga_permalam}} /malam</strong></p>
 							</div>
 						</div>
 					</a>
 				</div>
-				<div class="col-md-3">
-					<a href="" class="card-link">
-						<div class="card" style="width: 18rem;">
-							<img src="https://pix10.agoda.net/hotelImages/169045/-1/399a983e06a2e5936e1cb9150adab5fb.jpg?s=1024x768" class="card-img-top img-content" alt="...">
-							<div class="card-body">
-								<h5 class="card-title text-dark">KAMAR 002</h5>
-								<p class="card-text text-dark"><strong>Rp. 300.000,00 /malam</strong></p>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3">
-					<a href="" class="card-link">
-						<div class="card" style="width: 18rem;">
-							<img src="https://asset.kompas.com/crops/8FP4BffTgNDTPYATqSOHIyd5x2U=/0x0:0x0/750x500/data/photo/2017/02/11/1712209suite-room780x390.jpg" class="card-img-top img-content" alt="...">
-							<div class="card-body">
-								<h5 class="card-title text-dark">KAMAR 003</h5>
-								<p class="card-text text-dark"><strong>Rp. 430.000,00 /malam</strong></p>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3">
-					<a href="" class="card-link">
-						<div class="card" style="width: 18rem;">
-							<img src="https://d1nabgopwop1kh.cloudfront.net/hotel-asset/10000004002705966_wh_5" class="card-img-top img-content" alt="...">
-							<div class="card-body">
-								<h5 class="card-title text-dark">KAMAR 004</h5>
-								<p class="card-text text-dark"><strong>Rp. 330.000,00 /malam</strong></p>
-							</div>
-						</div>
-					</a>
-				</div>
+				{{/ each}}
 			</div>
-			<div class="row mt-2">
-				<div class="col-md-3">
-					<a href="" class="card-link">
-						<div class="card" style="width: 18rem;">
-							<img src="https://www.thebullhotel.co.uk/-/media/Sites/Microsites/B/The-Bull-Hotel-Bridport-_-H012/Images/2017-Images/Rooms/3-Family-Room/8.jpg" class="card-img-top img-content" alt="...">
-							<div class="card-body">
-								<h5 class="card-title text-dark">KAMAR 005</h5>
-								<p class="card-text text-dark"><strong>Rp. 200.000,00 /malam</strong></p>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3">
-					<a href="" class="card-link">
-						<div class="card" style="width: 18rem;">
-							<img src="https://thewallpaper.co//wp-content/uploads/2016/09/hd-place-wallpapers-landscapes-love-amazing-desktop-images-high-definition-lovely-places-seasons-1920x1200.jpg" class="card-img-top img-content" alt="...">
-							<div class="card-body">
-								<h5 class="card-title text-dark">KAMAR 006</h5>
-								<p class="card-text text-dark"><strong>Rp. 230.000,00 /malam</strong></p>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3">
-					<a href="" class="card-link">
-						<div class="card" style="width: 18rem;">
-							<img src="https://d1nabgopwop1kh.cloudfront.net/hotel-asset/10000004002705966_wh_5" class="card-img-top img-content" alt="...">
-							<div class="card-body">
-								<h5 class="card-title text-dark">KAMAR 007</h5>
-								<p class="card-text text-dark"><strong>Rp. 260.000,00 /malam</strong></p>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3">
-					<a href="" class="card-link">
-						<div class="card" style="width: 18rem;">
-							<img src="https://media-cdn.tripadvisor.com/media/photo-s/08/f9/36/c6/the-alana-surabaya.jpg" class="card-img-top img-content" alt="...">
-							<div class="card-body">
-								<h5 class="card-title text-dark">KAMAR 008</h5>
-								<p class="card-text text-dark"><strong>Rp. 340.000,00 /malam</strong></p>
-							</div>
-						</div>
-					</a>
-				</div>
+		</div>
+	</div>
+	<div class="card mt-5" id="info">
+		<h4 align="center" class="mt-4">Seputar Tentang Hotel</h4>
+		<div class="row m-4"> 
+			<div class="col-4">
+				<img src="https://content3.jdmagicbox.com/comp/patiala/m8/9999px175.x175.170227095135.t4m8/catalogue/hotel-hd-residency-urban-estate-phase-2-patiala-floating-ac-banquet-halls-7yuw7p1.jpeg" class="img-thumbnail">
 			</div>
-			<div class="mt-4 text-center">	
-				<a href="#" class="btn btn-success">Lihat Semuanya</a>
+			<div class="col-4">
+				<img src="https://content.jdmagicbox.com/comp/patiala/m8/9999px175.x175.170227095135.t4m8/catalogue/hotel-hd-residency-urban-estate-phase-2-patiala-floating-ac-banquet-halls-fpybfvi.jpeg" class="img-thumbnail">
+			</div>
+			<div class="col-4">
+				<img src="https://content3.jdmagicbox.com/comp/patiala/m8/9999px175.x175.170227095135.t4m8/catalogue/hotel-hd-residency-urban-estate-phase-2-patiala-floating-ac-banquet-halls-o9v58zw.jpeg" class="img-thumbnail">
 			</div>
 		</div>
 	</div>
 </div>
+<br>
 {{!-- End Produk --}}
 {{> footer}}
