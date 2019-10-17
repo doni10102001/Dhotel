@@ -77,14 +77,17 @@ router.post('/login', function(req, res, next) {
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
- 
+ let data = {
+   title: 'Dhotel'
+ };
  hotelD.find((err, docs) => {
  	
  	kamarD.find((err, doc) => {
  		if(!err){
  		res.render('index', {
- 			list: docs,
- 			item: doc
+      list: docs,
+       item: doc,
+       data
  		});
 	 	}else{
 	 		alert("Error!" + err);
